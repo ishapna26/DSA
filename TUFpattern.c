@@ -201,3 +201,171 @@ void main(){
         printf("\n");
     }
 }
+
+j.  *
+    **
+    ***
+    ****
+    ****
+    ***
+    **
+    *
+   
+#include<stdio.h>
+void main(){
+    int n;
+    scanf("%d",&n);
+    
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=i;j++){
+            printf("*");
+        }
+        printf("\n");
+        
+    }
+    
+    for(int s=1;s<=n;s++){
+        for(int k=1;k<=(n-s)+1;k++){
+            printf("*");
+        }
+        printf("\n");
+    }
+ }
+
+j.  *
+    **
+    ***
+    ****
+    *****
+    ****
+    ***
+    **
+    *
+
+//my broken code (not advisable but works)
+#include<stdio.h>
+void main(){
+    int n;
+    scanf("%d",&n);
+    
+    for(int i=1;i<=(2*n)-1;i++){
+        if(i>n){
+            for(int j=n-1;j>=1;j--){
+                for(int k=1;k<=j;k++){
+                    printf("*");
+                }
+                printf("\n");
+            }
+            break;
+        }
+        else{
+            for(int j=1;j<=i;j++){
+                printf("*");
+            }
+        }
+        printf("\n");
+    }
+    
+}
+
+//or
+
+#include<stdio.h>
+void main(){
+    int n;
+    scanf("%d",&n);
+    
+    for(int i=1;i<=(2*n)-1;i++){
+        if(i>n){
+            for(int j=1;j<=(2*n)-i;j++){
+                printf("*");
+            }
+            printf("\n");
+        }
+        else{
+            for(int j=1;j<=i;j++){
+                printf("*");
+            }
+            printf("\n");
+        }
+    }
+}
+
+k.       *
+        **
+       ***
+      ****
+     *****
+
+#include<stdio.h>
+void main(){
+    int n;
+    scanf("%d",&n);
+    
+    for(int i=1;i<=n;i++){
+        for(int k=1;k<=n-i;k++){
+            printf(" ");
+        }
+        for(int j=1;j<=i;j++){
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+l.   *****
+      ****
+       ***
+        **
+         *
+#include<stdio.h>
+
+void main(){
+    int n;
+    scanf("%d",&n);
+    
+    for(int i=n; i>=1;i--){
+        for(int k=1;k<=n-i;k++){
+            printf(" ");
+        }
+        for(int j=1;j<=i;j++){
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+m.      *
+       ***
+      *****
+     *******
+    *********
+
+#include<stdio.h>
+void main(){
+    int n;
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        for(int k=1;k<=n-i;k++){
+            printf(" ");
+        }
+        for(int j=1;j<=(2*i)-1;j++){
+            printf("*");
+        }
+        for(int k=1;k<=n-i;k++){
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+
+n.  *********
+     *******
+      *****
+       ***
+        *
+
+
+
+
+   
