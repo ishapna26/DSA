@@ -394,6 +394,39 @@ o.      *
        ***
         *  
 
+//my code with high cost
+#include<stdio.h>
+void main(){
+    int n;
+    scanf("%d",&n);
+    for(int i=1; i<=(2*n)-1;i++){
+        if(i>n){
+            for(int s=1;s<=(n-1);s++){
+                for(int k=1;k<=s;k++){
+                    printf(" ");
+                }
+                for(int j=1;j<=2*((n-1)-s)+1;j++){
+                    printf("*");
+                }
+                for(int k=1;k<=s;k++){
+                    printf(" ");
+                }
+                printf("\n");
+            }
+            break;
+        }
+        
+        else{
+        for(int k=1;k<=n-i;k++){
+            printf(" ");
+        }
+        for(int j=1;j<=(2*i)-1;j++){
+            printf("*");
+        }
+        printf("\n");
+        }
+    }
+}
 
 
 
