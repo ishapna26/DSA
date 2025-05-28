@@ -198,3 +198,50 @@ s.       *
        *   *
         * *
          *
+//yet to be uploaded
+
+x.          1
+          2 1 2
+        3 2 1 2 3
+      4 3 2 1 2 3 4
+    5 4 3 2 1 2 3 4 5
+
+#include<stdio.h>
+void main(){
+    int n;
+    scanf("%d",&n);
+    
+    for(int i=1;i<=n;i++){
+        int start=i;
+        for(int k=1;k<=(n-i);k++){
+            printf(" ");
+        }
+        
+        for(int j=1;j<=((2*i)-1);j++){
+            if(j==i){
+                printf("1");
+            }
+            else{
+                if(j<i){
+                    printf("%d",start);
+                    start--;
+                }
+                else{
+                    start++;
+                    printf("%d",start);
+                    
+                }
+                
+            }
+        }
+        printf("\n");
+    }
+}
+
+z.       4 4 4 4 4 4 4
+         4 3 3 3 3 3 4
+         4 3 2 2 2 3 4
+         4 3 2 1 2 3 4
+         4 3 2 2 2 3 4
+         4 3 3 3 3 3 4
+         4 4 4 4 4 4 4
