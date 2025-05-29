@@ -249,6 +249,38 @@ v.    **********
       ****  ****
       **********
 
+#include <stdio.h>
+
+void main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 1; i <= 2 * n; i++) {
+        int row = i > n ? 2 * n - i + 1 : i;
+
+        for (int j = 1; j <= 2 * n; j++) {
+            if (j <= n - row + 1 || j > n + row - 1)
+                printf("*");
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+}
+
+    
+
+
+w.     *        *
+       **      **
+       ***    ***
+       ****  ****
+       **********
+       ****  ****
+       ***    ***
+       **      **
+       *        *
+
  
 
 y.     1      1
