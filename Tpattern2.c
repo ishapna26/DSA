@@ -238,6 +238,46 @@ void main(){
     }
 }
 
+v.    **********
+      ****  ****
+      ***    ***
+      **      **
+      *        *
+      *        *
+      **      **
+      ***    ***
+      ****  ****
+      **********
+
+ 
+
+y.     1      1
+       12    21
+       123  321
+       12344321
+    
+#include<stdio.h>
+void main(){
+    int n;
+    scanf("%d",&n);
+    
+    for(int i=1;i<=n;i++){
+        int start=i;
+        for(int j=1;j<=i;j++){
+            printf("%d",j);
+        }
+        for(int k=1;k<=2*(n-i);k++){
+            printf(" ");
+        }
+        for(int j=1;j<=i;j++){
+            printf("%d",start);
+            start--;
+        }
+        printf("\n");
+    }
+}
+
+
 z.       4 4 4 4 4 4 4
          4 3 3 3 3 3 4
          4 3 2 2 2 3 4
