@@ -2,7 +2,7 @@ NOTES / FORMULAS:
 1. n%2==0 (To check even)
 2. n%10 (To find the last digit of a number) Eg. 123 ie. last digit=3
 3. n=n/10 (To eliminate the last digit of a number) Eg.123 result=12
-
+4. long res=(long)Math.pow(a,b) - To find the power of the digit
 //program
 1. Write a program that gets n as input and print the number of digits in the number
 
@@ -50,5 +50,31 @@ class Main{
             first=mod;
         }
         System.out.println(first+last);
+    }
+}
+
+3. Given two numbers a and b, find kth digit from right of ab.
+Example 1:
+Input: a = 3, b = 3, k = 1
+Output: 7
+Explanation: 33 = 27 and 1st digit from right is 7
+
+import java.util.*;
+
+class Main{
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        long a=sc.nextInt();
+        long b=sc.nextInt();
+        int k=sc.nextInt();
+        long res;
+        long last=0;
+        res=(long)Math.pow(a,b);
+
+        for(long i=1;i<=k;i++){
+            last=res%10;
+            res=res/10;
+        }
+        System.out.println(last);
     }
 }
