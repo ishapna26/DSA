@@ -3,6 +3,7 @@ NOTES / FORMULAS:
 2. n%10 (To find the last digit of a number) Eg. 123 ie. last digit=3
 3. n=n/10 (To eliminate the last digit of a number) Eg.123 result=12
 4. long res=(long)Math.pow(a,b) - To find the power of the digit
+  
 //program
 1. Write a program that gets n as input and print the number of digits in the number
 
