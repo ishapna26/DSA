@@ -268,6 +268,33 @@ void main() {
     }
 }
 
+//or
+
+import java.util.*;
+class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+
+        for(int i=1;i<=n*2;i++){
+            int rowChange=(i>n)?((2*n)-i)+1:i;
+            for (int j = 1; j <= 2*n; j++) {
+                if (j <= ((n - rowChange) + 1) + (2 * rowChange) - 2) {
+                    if (j <= ((n - rowChange) + 1)) {
+                        System.out.print("*");
+                    }
+                    else {
+                        System.out.print(" ");
+                    }
+                }
+                else {
+                        System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
     
 
 
@@ -317,3 +344,60 @@ z.       4 4 4 4 4 4 4
          4 3 2 2 2 3 4
          4 3 3 3 3 3 4
          4 4 4 4 4 4 4
+
+import java.util.*;
+
+class Main{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+
+        int n=sc.nextInt();
+
+        for(int row=1;row<=2*n-1;row++){
+            for(int col=1;col<=2*n-1;col++){
+                int topd=row;
+                int downd=(2*n)-row; //downd=(2*n)-1-row+1 = downd=(2*n)-row;
+                int leftd=col;
+                int rightd=(2*n)-col;
+                int a=Math.min(topd,downd);
+                int b=Math.min(leftd,rightd);
+                int ele=Math.min(a,b);
+                System.out.print(n-ele+1+" ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+z(A). Similar Pattern:
+1111111
+1222221
+1233321
+1234321
+1233321
+1222221
+1111111
+    
+import java.util.*;
+class Main{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+
+        int n=sc.nextInt();
+
+        for(int row=1;row<=2*n-1;row++){
+            for(int col=1;col<=2*n-1;col++){
+                int topd=row;
+                int downd=(2*n)-row; //downd=(2*n)-1-row+1 = downd=(2*n)-row;
+                int leftd=col;
+                int rightd=(2*n)-col;
+                int a=Math.min(topd,downd);
+                int b=Math.min(leftd,rightd);
+                int ele=Math.min(a,b);
+                System.out.print(ele);
+            }
+            System.out.println();
+        }
+    }
+}
