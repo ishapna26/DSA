@@ -1,5 +1,5 @@
 NOTES / FORMULAS:
-1. n%2==0 (To check even)
+1. n%2==0 (To check even) || n & 1==0 (using bitwise operator to check even or not)
 2. n%10 (To find the last digit of a number) Eg. 123 ie. last digit=3
 3. n=n/10 (To eliminate the last digit of a number) Eg.123 result=12
 4. long res=(long)Math.pow(a,b) - To find the power of the digit
