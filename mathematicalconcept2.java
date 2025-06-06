@@ -135,14 +135,14 @@ class Main{
     }
 }
 
-NOTE : TO check if a number is palindrome or not run only upto root(n) because after root n the factors pairs just reverse like n=4 (1*4, 2*2, 4*1)
+NOTE : TO check if a number is prime or not run only upto root(n) because after root n the factors pairs just reverse like n=4 (1*4, 2*2, 4*1)
 class Solution {
     static boolean isPrime(int n) {
         if (n <= 1) {
             return false;
         }
         for (int i = 2; i <= Math.sqrt(n); i++) {
-            if (n % i == 0) {
+            if (n % i == 0) { (here edachu oru divisor kuda divide analum we say it is prime)
                 return false; // Not a prime
             }
         }
@@ -168,6 +168,7 @@ class Main{
         System.out.print(count);
     }
 }
+
 
 
 
