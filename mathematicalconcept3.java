@@ -1,4 +1,4 @@
-TRICKS to SWAP: 1. use temp ;
+TRICKS to SWAP: 1. use temp ;           TRICKS for series: use formulas n*(n+1)/2-> 1+2+3+4+..+n
                 2. a=a+b b=a-b a=a-b;
 
 6. perfect number= (sum of all divisors is equal to the number itself) Eg. 6 (1+2+3=6)
@@ -165,4 +165,43 @@ class Main{
 		}
 		System.out.print(sum2);
 	}
+}
+
+iv. Given an integer n, calculate the sum of series 1^3 + 2^3 + 3^3 + 4^3 + … till n-th term. or [1^3 + 2^3 + 3^3...n^3 maths formula: (n(n+1)/2)^2]
+Input: n = 5
+Output: 225
+Explanation: 13 + 23 + 33 + 43 + 53 = 225
+// User function Template for Java
+
+class Solution {
+    int sumOfSeries(int n) {
+        // code here
+        int sum=0;
+        for(int i=1;i<=n;i++){
+            sum+=i*i*i;
+        }
+        return sum;
+    }
+}
+
+5. Given a positive integer n, find the number of perfect squares that are less than n in the sample space of perfect squares. The sample space consists 
+of all perfect squares starting from 1 (i.e., 1, 4, 9, 16, 25, …)
+Input: n = 9
+Output: 2
+Explanation: 1 and 4 are the only Perfect Squares less than 9. So, the Output is 2.
+
+class Solution {
+    static int countSquares(int n) {
+        // code here
+        int count=1;
+        for(int i=2;i<n;i++){
+            if((i*i)<n&&(i*i)>=1){
+                count++;
+            }
+            else{
+                break;
+            }
+        }
+        return count;
+    }
 }
