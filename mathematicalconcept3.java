@@ -1,3 +1,6 @@
+TRICKS to SWAP: 1. use temp ;
+                2. a=a+b b=a-b a=a-b;
+
 6. perfect number= (sum of all divisors is equal to the number itself) Eg. 6 (1+2+3=6)
   
 import java.util.*;
@@ -100,4 +103,66 @@ class Main{
     }
 }
 
-4. Number series
+4. Number series - to find the nth number in a series
+  
+i. Given a number n, find the nth term in the series 1, 3, 6, 10, 15, 21…
+Input: n = 4 
+Output: 10
+Explanation: The 4th term of the Series is 10.
+
+import java.util.*;
+
+class Main{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int sum=0;
+		for(int i=1;i<=n;i++) {
+			sum+=i;
+		}
+		System.out.print(sum);
+	}
+}
+
+ii. NOTE: Sum of the series 1 + (1+2) + (1+2+3) + (1+2+3+4) + …… + (1+2+3+4+…+n)
+Input: n = 5
+Output: 35 
+Explanation: 1 + (1+2) + (1+2+3).. = 35
+  
+import java.util.*;
+
+class Main{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int sum=0;
+		int sum2=0;
+		for(int i=1;i<=n;i++) {
+			int val=1;
+			sum+=i;
+			sum2=sum2+sum;
+		}
+		System.out.print(sum2);
+	}
+}
+
+iii. NOTE: Sum of the series 1 + (1+3) + (1+3+5) + (1+3+5+7) + …… + (1+3+5+7+…+(2n-1))
+Input: n = 2
+Output: 5 
+Explanation: 1 + (1+3) = 5
+import java.util.*;
+
+class Main{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int sum=0;
+		int sum2=0;
+		
+		for(int i=1;i<=n;i++) {
+			sum=sum+(2*i-1);
+			sum2=sum2+sum;
+		}
+		System.out.print(sum2);
+	}
+}
