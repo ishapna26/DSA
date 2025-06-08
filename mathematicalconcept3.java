@@ -1,5 +1,5 @@
 TRICKS to SWAP: 1. use temp ;           TRICKS for series: use formulas n*(n+1)/2-> 1+2+3+4+..+n
-                2. a=a+b b=a-b a=a-b;
+                2. a=a+b b=a-b a=a-b;   LCM formula -> n1*n2/gcd(n1,n2);
 
 6. perfect number= (sum of all divisors is equal to the number itself) Eg. 6 (1+2+3=6)
   
