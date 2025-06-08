@@ -197,3 +197,69 @@ class Main{
     }
 }
 
+1   5
+ 2 4 
+  3  
+ 2 4 
+1   5
+    
+import java.util.*;
+
+class Main{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		
+		for(int i=1;i<=n;i++) {
+			for(int j=1;j<=n;j++) {
+				if(j==i||j==n-i+1) {
+					System.out.print(j);
+				}
+				else {
+					System.out.print(" ");
+				}
+			}
+			System.out.println();
+		}
+	}
+}
+
+5   1
+ 4 2 
+  3  
+ 2 4 
+1   5
+
+import java.util.*;
+
+class Main{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int mid=(n+1)/2;
+		for(int i=1;i<=n;i++) {
+			for(int j=1;j<=n;j++) {
+				if(j==i){
+					if(i<mid) {
+					    System.out.print(n-j+1);
+					}
+					else {
+						System.out.print(j);
+					}
+				}
+				else if(j==n-i+1) {
+					if(i<mid) {
+					    System.out.print(n-j+1);
+					}
+					else {
+						System.out.print(j);
+					}
+				}
+				else {
+					System.out.print(" ");
+				}
+			}
+			System.out.println();
+		}
+	}
+}
