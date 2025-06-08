@@ -205,3 +205,46 @@ class Solution {
         return count;
     }
 }
+
+6. LCM program { FORMULA FOR LCM = (num1*num2)/GCD(num1,num2) }
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        
+        int n1=sc.nextInt();
+        int n2=sc.nextInt();
+        int hcf=GCD(n1,n2);
+        int lcm=(n1*n2)/hcf;
+        System.out.print(lcm);
+        
+    }
+    static int GCD(int n1, int n2) {
+        int gcd=0;
+        if(n1==0) {
+            gcd=n2;
+            return gcd;
+        }
+        if(n2==0) {
+            gcd=n1;
+            return gcd;
+        }
+        while(n1!=n2) {
+            if(n1>n2) {
+                n1=n1-n2;
+            }
+            if(n2>n1) {
+                n2=n2-n1;
+            }
+        }
+        gcd=n1;
+        return gcd;
+        
+        
+    }
+}
