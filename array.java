@@ -15,5 +15,15 @@ Why we store same DataType in a Array? Since array stores memory contiguously th
 How to access an element in an array? Through Index -> arr[3]. Initially the array stores the starting elements address. eg. Assume 100 is the starting element address. Then arr[3] address will be calculated 
                                                                                                                              by 100+(3(index)*4(int datatype size=4bytes))=100+12=112(4 th elements address)
 
+1. Input: arr[] = [2, 4, 3, 5, 6]
+Output: 2 3 
+Explanation: 2 and 3 are respectively the smallest and second smallest elements in the array.
+
+Approached in 3 ways:
+1. Sort the list. Find the first largest then traverse the array in reverse check the condition if(largest!=arr[i]) ->secl=arr[i] --> break;
+2. Find the max element from the array and then the condition to find second lagest must be arr[i]<max && arr[i]>=secl;
+
+
+
 
   
