@@ -61,6 +61,34 @@ class Solution {
     }
 }
 
+5. sieve of eratosthenes
+
+import java.util.*;
+
+class Main{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int[] a=new int[n+1];
+		
+		for(int i=2;i<=Math.sqrt(n);i++) {
+			if(a[i]==0) {
+			   for(int j=i*2;j<=n;j=j+i) {
+				   a[j]=1;
+			   }
+		
+		    }
+		}
+		
+		for(int k=2;k<=n;k++) {
+			if(a[k]==0) {
+				System.out.print(k+" ");
+			}
+		}
+		
+	}
+}
+    
 
 
   
