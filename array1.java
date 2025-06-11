@@ -89,6 +89,40 @@ class Main{
 	}
 }
     
+6. Given a range [L, R]. The task is to find the sum of all the prime numbers in the given range from L to R both inclusive.
+Input : L = 10, R = 20
+Output : Sum = 60
 
+import java.util.*;
+
+class Main{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int L=sc.nextInt();
+		int R=sc.nextInt();
+		int n=Math.max(L, R);
+		int start=Math.min(R, L);
+		int end=Math.max(R, L);
+		int sum=0;
+		int[] arr=new int[n+1];
+		
+		for(int i=2;i<=Math.sqrt(n);i++) {
+			if(arr[i]==0) {
+			   for(int j=2*i;j<=n;j=j+i) {
+				   arr[j]=1;
+			   }
+			}
+		}
+		
+		for(int i=start;i<=end;i++) {
+			if(arr[i]==0) {
+				System.out.print(i+" ");
+				sum+=i;
+			}
+		}
+		System.out.println();
+		System.out.println(sum);
+	}
+}
 
   
