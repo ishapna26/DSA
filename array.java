@@ -22,8 +22,67 @@ Explanation: 2 and 3 are respectively the smallest and second smallest elements 
 Approached in 3 ways:
 1. Sort the list. Find the first largest then traverse the array in reverse check the condition if(largest!=arr[i]) ->secl=arr[i] --> break;
 2. Find the max element from the array and then the condition to find second lagest must be arr[i]<max && arr[i]>=secl;
+3. optimized solution: finf firstl and secondl in same loop
+import java.util.*;
 
+class Main{
+	public static void main(String[] args) {
+		int[] arr= {64,35,64,34};
+		int n=arr.length;
+		
+		int firstl=arr[0];
+		int secondl=-1;
+		
+		for(int i=1;i<n;i++) {
+			if(arr[i]>firstl) {
+				secondl=firstl;
+				firstl=arr[i];
+			}
+			else if(arr[i]!=firstl && arr[i]>secondl) {
+				secondl=arr[i];
+			}
+		}
+		System.out.println(secondl);
+		
+	}
+}
 
+ii. To find the answer for the gn question above: ie. smallest element
 
+// User function Template for Java
+
+class Solution {
+    public int[] minAnd2ndMin(int arr[]) {
+        // code here
+        int n=arr.length;
+        int firstmin=Integer.MAX_VALUE; //it stores the integers maximum possible value
+        int secondmin=Integer.MAX_VALUE;
+        
+        for(int i=0;i<n;i++){
+            if(arr[i]<firstmin){
+                secondmin=firstmin;
+                firstmin=arr[i];
+            }
+            else if(arr[i]!=firstmin && arr[i]<secondmin){
+                secondmin=arr[i];
+            }
+        }
+        if(secondmin==Integer.MAX_VALUE){
+            int[] res={-1};
+            return res;
+        }
+        else{
+            int[] res={firstmin, secondmin};
+            return res;
+        }
+        
+    }
+}
+
+NOTES: Why didnt we use arr[0] and secondmin=-1; 
+
+- If all array values are positive, initializing secondmin = -1 is risky, because:
+- You are trying to store second smallest value.
+- But -1 is smaller than any positive number and the condition (arr[I]<secondmin) is never gonna get executed.
 
   
