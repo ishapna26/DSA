@@ -6,11 +6,21 @@ Eg. void fun(){
       if(base condition){
        - very important otherwise the recursion will be infinite call;
       }
-      1. code //Executes at calling Time. - Ascending phase
+      1. code //Executes at calling Time. - Ascending phase (GETS EXECUTED WHEN THE FUNCTION IS CALLED)
       fun()
-      2. code //Executes at returning Time. - Descending Phase
+      2. code //Executes at returning Time. - Descending Phase (GETS EXECUTED WHEN THE FUNCTION IS RETURNING)
    }
 
 Difference Between Loop and a Recursion
   - Loop (Only have ascending phase)
   - A recursion can have both ascending and descending phase
+
+HOW TO SOLVE ANY RECURSIVE PROBLEMS:
+-----------------------------------
+1. Break the problem into smaller problem.
+2. Build Logic behind the smaller problem.
+3. Find the recursive step for given problem.
+4. Find base condition.
+5. Build recursive tree.
+
+  
