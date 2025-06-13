@@ -111,3 +111,164 @@ class Main{
 	}
 }
 
+5. Write a recursive program to find the sum of digits of a number
+Example: Input: 342
+Output: 9
+import java.util.*;
+
+class Main{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		System.out.print(count(n));
+	}
+	
+	public static int count(int n) {
+		n=Math.abs(n);
+		if(n%10==n) {
+			if(n<0) {
+				return -n;
+			}
+			else {
+				return n;
+			}
+		}
+		int mod=n%10;
+		return mod+count(n/10);
+	}
+}
+
+6. Write a Program to find the power of a number recursively. Take two inputs, number and the power.
+
+Example: Input: 2 3
+Output: 8
+	
+import java.util.*;
+
+class Main{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		long a=sc.nextLong();
+		long b=sc.nextLong();
+		System.out.println(power(a,b));
+		sc.close();
+	}
+	public static long power(long a, long b) {
+		if(b==0) {
+			return 1;
+		}
+		return a*power(a,b-1);
+	}
+}
+
+7. Traverse Array using Recursion:                                        
+forward:
+-------
+import java.util.*;
+
+class Main{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter array size: ");
+		int n=sc.nextInt();
+		int[] a =new int[n];
+		for(int i=0;i<n;i++) {
+			a[i]=sc.nextInt();
+		}
+		int i=0;
+		traverse(a,n,i);
+	}
+	
+	public static void traverse(int[] a, int n, int i) {
+		if(i>=n) {
+			return;
+		}
+		System.out.print(a[i]+" ");
+		i=i+1;
+		traverse(a,n,i);
+	}
+}
+reverse:
+--------
+import java.util.*;
+
+class Main{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter array size: ");
+		int n=sc.nextInt();
+		int[] a =new int[n];
+		for(int i=0;i<n;i++) {
+			a[i]=sc.nextInt();
+		}
+		int i=n;
+		traverse(a,n,i);
+	}
+	
+	public static void traverse(int[] a, int n, int i) {
+		if(i<=0) {
+			return;
+		}
+		System.out.print(a[i-1]+" ");
+		i=i-1;
+		traverse(a,n,i);
+	}
+}
+
+8. Linear Search using Recursion
+	
+import java.util.*;
+
+class Main{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter array size: ");
+		int n=sc.nextInt();
+		int[] a =new int[n];
+		for(int i=0;i<n;i++) {
+			a[i]=sc.nextInt();
+		}
+		int key=sc.nextInt();
+		int i=0;
+		System.out.print(traverse(a,n,i,key));
+	}
+	
+	public static int traverse(int[] a, int n, int i, int key) {
+		if(i>=n) {
+			return -1;
+		}
+		if(a[i]==key) {
+			return i;
+		}
+		return traverse(a,n,i+1,key);
+		
+	}
+}
+
+9. sum of array 
+
+import java.util.*;
+
+class Main{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int i=0;
+		int [] a=new int[n];
+		for(int j=0;j<n;j++) {
+			a[j]=sc.nextInt();
+		}
+		System.out.print(sumf(a,n,i));
+	}
+	public static int sumf(int[] a, int n, int i) {
+		if(i>=n) {
+			return 0;
+		}
+		int sum=0;
+		sum+=a[i];
+		i=i+1;
+		return sum+=sumf(a,n,i);
+	}
+}
+
+
