@@ -1,7 +1,7 @@
 SORTING: Arranging elements in a sorted order is called sorting. There are two Types of sorting : 1. Comparison Based Sort (Bubble, Insertion, Selection, Merge, Heap)
                                                                                                   2. Index Based Sort (Count sort, Bucket sort, Radix sort)
   
-1. Bubble sort: In every iteration we will move the unsorted max element to the right position using adjacent swapping.
+1. Bubble sort: In every iteration we will move the unsorted max element to the right position using adjacent swapping.                                TIME COMPLEXITY: O(n^2)            
 ---------------
 
 import java.util.*;
