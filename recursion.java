@@ -366,7 +366,32 @@ class Main{
 }
 
 
+14. Pascal Triangle 
 
+import java.util.*;
+
+class Main{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int i,j=0;
+		for(i=0;i<n;i++) {
+			for(int k=1;k<=n-i-1;k++) {
+				System.out.print(" ");
+			}
+			for(j=0;j<=i;j++) {
+				System.out.print(pascal(i,j)+" ");
+			}
+			System.out.println();
+		}
+	}
+	public static int pascal(int n, int r) {
+		if(n==r||r==0) {
+			return 1;
+		}
+		return pascal(n-1,r-1)+pascal(n-1,r);
+	}
+}
 
 
 
