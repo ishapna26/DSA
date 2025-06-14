@@ -301,7 +301,28 @@ class Main{
 	}
 }
 
-Write a program to print the divisors of a number recursively.
+11. Write a program to print the divisors of a number recursively.
 Input: 6
 Output: 1 2 3 6
+
+import java.util.*;
+
+class Main{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int i=1;
+		print(n,i);
+	}
+	public static void print(int n, int i) {
+		if(i>=n+1) {
+			return;
+		}
+		if(n%i==0) {
+			System.out.print(i+" ");
+		}
+		i=i+1;
+		print(n,i);
+	}
+}
 
