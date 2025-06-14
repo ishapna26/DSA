@@ -326,3 +326,6 @@ class Main{
 	}
 }
 
+12. Code ncr using recursion:
+
+
