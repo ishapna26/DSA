@@ -326,6 +326,47 @@ class Main{
 	}
 }
 
-12. Code ncr using recursion:
+12. Code ncr using recursion: (nCr formula) = (n!)/(r!*(n-r)!) - selection A B C D -> ABC (ALLOWED) ACB (NOT COUNTED) unique selection of the elements.
+import java.util.*;
+-nCr can be obtained by performing addition recursively by using Pascal Traingle.
+class Main{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		long n=sc.nextInt();
+		long r=sc.nextInt();
+		long nr=(n-r);
+		long combination=(fact(n)/(fact(r)*fact(nr)));
+		System.out.print(combination);
+	}
+	
+	public static long fact(long num) {
+		if(num==1||num==0) {
+			return 1;
+		}
+		return num*fact(num-1);
+	}
+}
+
+13. NCR value can be obtained from the rows of the Pascal's Triangle:
+import java.util.*;
+
+class Main{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int r=sc.nextInt();
+		System.out.print(pascal(n,r));
+	}
+	public static int pascal(int n, int r) {
+		if(n==r||r==0) {
+			return 1;
+		}
+		return pascal(n-1,r-1)+pascal(n-1,r);
+	}
+}
+
+
+
+
 
 
