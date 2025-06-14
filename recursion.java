@@ -272,3 +272,36 @@ class Main{
 }
 
 
+10. Array sorted or not
+
+import java.util.*;
+
+class Main{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int i=0;
+		int[] a=new int[n];
+		
+		for(int j=0;j<n;j++) {
+			a[j]=sc.nextInt();
+		}
+		System.out.print(isSorted(a,n,i));
+		
+	}
+	public static boolean isSorted(int [] a, int n, int i) {
+		if(i>=n-1) {
+			return true;
+		}
+		if(a[i]>a[i+1]) {
+			return false;
+		}
+		i=i+1;
+		return isSorted(a,n,i);
+	}
+}
+
+Write a program to print the divisors of a number recursively.
+Input: 6
+Output: 1 2 3 6
+
