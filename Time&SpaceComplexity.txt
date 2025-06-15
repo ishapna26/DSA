@@ -1,4 +1,4 @@
-Time Complexity:
+Time Complexity:  TRICKS TO GUESS TC IN PLATFORMS: <10^4 = O(n2) |<10^6 = O(N logn) |<10^8 = O(N) 
 ----------------
 
 It is the relationship of time grows according to the input grows.
