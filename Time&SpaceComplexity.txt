@@ -1,1 +1,48 @@
+Time Complexity:
+----------------
 
+It is the relationship of time grows according to the input grows.
+
+Time taken to execute the program in relationship with the input size.
+
+Big Notations:
+1. Big O = worst case / Upperbound - (Maximum time taken to execute the program)
+2. Big Omega = best case / Lowerbound - (Minimun time taken to execute the program)
+3. Big Theta = average case / both upper and lower bound - (Average Time taken to execute the program)
+
+Time Complexities( From best to worst case) -> why O in every Notation -> (Because worst case is something we need to consider)
+-------------------------------------------
+1. O(1)
+2. O(log N)
+---O(sqrt(N))-----
+3. O(N)
+4. O(N log N)
+5. O(N^2)
+6. O(N^3)
+7. O(2^n)
+8. O(n!)
+
+Rules for calculating Time complexities:
+----------------------------------------
+Rule no 1 : Consider time complexity in worst case big O
+
+Rule no 2 : Eliminate lower terms cause it doesnt make significant change
+
+Rule no 3 : Eliminate coefficients
+
+
+Space Complexity: Space/ Memory taken by the program is called space complexity.
+----------------
+
+It has : 1. Input space 2. Auxillary Space
+
+eg. int a,b; ---------------------------------------> INPUT SPACE (1)
+    scanf("%d %d",&a,&b) (1)
+    int sum=a+b; -----------------------------------> AUXILLARY SPACE (1)
+SPACE COMPLEXITY = O(3) = O(1)
+
+For Array:
+space complexity = O(n)
+
+For Matrix:
+space complexity = O(n^2)
