@@ -114,29 +114,27 @@ t.     ****
        *  *
        ****
 
-#include<stdio.h>
-void main(){
-    int n;
-    scanf("%d",&n);
-    
-    for(int i=1;i<=n;i++){
-        if(i==1||i==n){
-            for(int j=1;j<=n;j++){
-                printf("*");
-            }
-        }
-        else{
-            for(int j=1;j<=n;j++){
-                if(j==1||j==n){
-                    printf("*");
-                }
-                else{
-                    printf(" ");
-                }
-            }
-        }
-        printf("\n");
-    }
+import java.util.*;
+
+class Main2{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		for(int i=1;i<=n;i++) {
+			for(int j=1;j<=n-1;j++) {
+				if(i==1|i==n) {
+					System.out.print("*");
+				}
+				else if(j==1||j==n-1) {
+					System.out.print("*");
+				}
+				else {
+					System.out.print(" ");
+				}
+			}
+			System.out.println();
+		}
+	}
 }
 
 
