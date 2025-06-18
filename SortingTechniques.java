@@ -30,3 +30,14 @@ class Main{
 		a[n2]=temp;
 	}
 }
+
+2. Merge Sort -> Divide and Conquer Algorithm.                                                                                                            TIME COMPLEXITY: O(n log n)      
+--------------
+An array is divided into n sublists. These sublists are then merged to produce sorted list.
+
+
+
+
+
+
+
