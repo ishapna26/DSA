@@ -85,4 +85,32 @@ NOTES: Why didnt we use arr[0] and secondmin=-1;
 - You are trying to store second smallest value.
 - But -1 is smaller than any positive number and the condition (arr[I]<secondmin) is never gonna get executed.
 
+
+Third Largest Element
+class Solution {
+    int thirdLargest(int arr[]) {
+        int n = arr.length;
+        if (n <= 2) return -1;
+        int big1 = Math.max(arr[0], arr[1]);
+        int big2 = Math.min(arr[0], arr[1]);
+        int big3 = Integer.MIN_VALUE;
+
+        for (int i = 2; i < n; i++) {
+            // three way filtering
+            if (arr[(int)i] > big3) {
+                big3 = arr[(int)i];
+            }
+            if (arr[(int)i] > big2) {
+                big3 = big2;
+                big2 = arr[(int)i];
+            }
+            if (arr[(int)i] > big1) {
+                big2 = big1;
+                big1 = arr[(int)i];
+            }
+        }
+        return big3;
+    }
+}
+
   
