@@ -142,3 +142,4 @@ class Main2{
     }
 }
 	
+6. Rotate array by k:
