@@ -86,4 +86,32 @@ class Main2{
 	}
 }
 
+4. MissingNumber 2
+Sample Inputs:
+5           2
+1 2 4 5     1
+Sample Outputs: 0
+3           2
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[] a=new int[n-1];
+        for(int i=0;i<n-1;i++){
+            a[i]=sc.nextInt();
+        }
+        int sum=0;
+        int total=(n*(n+1))/2;
+        for(int i=0;i<n-1;i++){
+            sum+=a[i];
+        }
+        System.out.println(total-sum);
+    }
+}
 
