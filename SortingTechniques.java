@@ -40,14 +40,11 @@ import java.util.*;
 class Main2{
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
+		int[] a= {369,1,90,45,2,4,-1};
+		int n=a.length;
 		
-		int n=sc.nextInt();
-		int a[] =new int[n];
-		int b[] =new int[n];
+		int [] b=new int[n];
 		int lb=0,ub=n-1;
-		for(int i=0;i<n;i++) {
-			a[i]=sc.nextInt();
-		}
 		mergeSort(a,b,lb,ub);
 		
 		for(int i=0;i<n;i++) {
@@ -67,8 +64,10 @@ class Main2{
 			}
 		}
 	}
-	public static void merge(int[] a, int b[] , int lb, int mid, int ub) {
-		int i=lb,j=mid+1,k=i;
+	
+	public static void merge(int[] a, int[] b, int lb, int mid, int ub) {
+		int i=lb,j=mid+1,k=lb;
+		
 		while(i<=mid && j<=ub) {
 			if(a[i]<=a[j]) {
 				b[k]=a[i];
@@ -97,8 +96,3 @@ class Main2{
 		}
 	}
 }
-
-
-
-
-
