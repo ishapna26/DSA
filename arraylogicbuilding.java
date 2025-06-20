@@ -172,4 +172,37 @@ class Main2{
 	}
 }
 
+2. better 
+import java.util.*;
 
+class Main2{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int k=sc.nextInt();
+		k=k%n;
+		int[] a= new int[n];
+		for(int i=0;i<n;i++) {
+			a[i]=sc.nextInt();
+		}
+		int start=n-k;
+		int[] temp= new int[k];
+		int j=0;
+		for(int i=start;i<n;i++) {
+			temp[j]=a[i];
+			j++;
+		}
+		for(int i=start-1;i>=0;i--) {
+			a[i+k]=a[i];
+		}
+		for(int i=0;i<temp.length;i++) {
+			a[i]=temp[i];
+		}
+		for(int i=0;i<n;i++) {
+			System.out.print(a[i]+" ");;
+		}
+	}
+}
+
+3. optimal
+	
