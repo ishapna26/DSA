@@ -143,3 +143,33 @@ class Main2{
 }
 	
 6. Rotate array by k:
+-> Brute Force Approach
+import java.util.*;
+
+class Main2{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int k=sc.nextInt();
+		
+		int[] a= new int[n];
+		for(int i=0;i<n;i++) {
+			a[i]=sc.nextInt();
+		}
+
+		for(int i=1;i<=k;i++) {
+			int temp=a[n-1];
+			for(int j=n-1;j>=1;j--) {
+				a[j]=a[j-1];
+			}
+			a[0]=temp;
+			
+		}
+
+		for(int i=0;i<n;i++) {
+			System.out.print(a[i]+" ");
+		}
+	}
+}
+
+
