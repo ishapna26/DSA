@@ -312,3 +312,39 @@ class Main{
 		}
 	}
 }
+
+15 14 12  9  5
+   13 11  8  4
+      10  7  3
+          6  2
+             1
+
+#include <stdio.h>
+
+void main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = n; i >= 1; i--) {
+        int val = i;
+        int row[50];  // temp array to store values in the row
+
+        // Build row values
+        for (int j = 0; j < i; j++) {
+            row[j] = val;
+            val += (n - j - 1);
+        }
+
+        // Print leading spaces
+        for (int s = 1; s <= n - i; s++) {
+            printf("    ");
+        }
+
+        // Print row values in reverse
+        for (int j = i - 1; j >= 0; j--) {
+            printf("%-4d", row[j]);
+        }
+
+        printf("\n");
+    }
+}
