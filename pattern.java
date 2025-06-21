@@ -23,6 +23,30 @@ void main() {
     }
 }
 
+n=5
+1
+2 6
+3 7 10
+4 8 11 13
+5 9 12 14 15
+
+#include<stdio.h>
+
+void main() {
+    int n;
+    scanf("%d", &n);
+    
+    for(int i = 1; i <=n; i++) {
+        int val=i;
+        for(int j = 1; j <= i; j++) {
+            printf("%d ", val);
+            val +=(n - j);
+        }
+        printf("\n");
+    }
+}
+
+	
 n = 4
 Expected output:
 
