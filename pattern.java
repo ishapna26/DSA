@@ -1,3 +1,28 @@
+N=3
+1
+2 6
+3 7 9
+4 8
+5
+
+#include<stdio.h>
+
+void main() {
+    int n;
+    scanf("%d", &n);
+    
+    for(int i = 1; i <= 2 * n - 1; i++) {
+        int row = (i > n) ? (2 * n - i) : i;
+        int val = i;
+
+        for(int j = 1; j <= row; j++) {
+            printf("%d ", val);
+            val += (2 * (n - j));
+        }
+        printf("\n");
+    }
+}
+
 n = 4
 Expected output:
 
