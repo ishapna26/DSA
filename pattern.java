@@ -1,3 +1,4 @@
+//zoho pattern
 N=3
 1
 2 6
