@@ -205,4 +205,7 @@ class Main2{
 }
 
 3. optimal
+
+
+reomove duplicates:
 	
