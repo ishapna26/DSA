@@ -9,6 +9,7 @@ Java Collections Framework:
 * It has a lot of inbuilt methods that can be accessed using (.) operator to manipulate or put to use.
 * Popular methods: 
                 size(), get(), remove(), add(), contains()
+
 Example Program 1:
 ----------------
 import java.util.*;
@@ -27,8 +28,66 @@ class Main3{
 	}
 }
 
-2. LinkedList: (Resizable array / Dynamic array) - where the values can be added from both the sides ie. Rear and Front.
-   Syntax: LinkedList <DataType> a=new LinkedList<>();
 
-* Popular Methods: size(), add(), addFirst(), addLast()
+
+2. LinkedList: (Resizable array / Dynamic array) - where the values can be added from both the sides ie. Rear and Front. It can hold different types of data.
+   Syntax: " LinkedList <DataType> a=new LinkedList<>(); "
+
+* Popular Methods: size(), add(), addFirst(), addLast(), removeFirst(), removeLast()
+
+Example Program 1:
+-----------------
+import java.util.*;
+
+class Main3{
+	public static void main(String[] args) {
+		LinkedList<Data> link =new LinkedList<>();
+		Data data=new Data("shapna",21,"cse",24.0f);
+		link.add(data);
+		System.out.println(link.get(0));
+
+	}
+}
+class Data {
+	String name;
+	int age;
+	String dept;
+	float roll;
+
+	Data(String name, int age, String dept, float roll){
+		this.name = name;
+		this.age = age;
+		this.dept = dept;
+		this.roll = roll;	
+	}
+
+	@Override
+	public String toString() {
+		return "Name: " + name + ", Age: " + age + ", Dept: " + dept + ", Roll: " + roll;
+	}
+}
+
+3. Stack : It is used to store elements in which the elements can be accessed using LIFO (Last In First Out) Principle. It " extends Vector interface "
+   Syntax: " Stack <DataType> a=new Stack<>(); "
+
+* Methods: push(), pop(), peak() - top element, setSize() - set the size of the stack
+
+Example Program 1:
+-----------------
+import java.util.*;
+
+class Main3{
+	public static void main(String[] args) {
+		
+		Stack<String> name=new Stack<>();
+		name.push("Allie Milton");
+		name.push("Benjamin");
+		name.push("Carlise");
+		for(int i=0;i<name.size();i++) {
+			System.out.println(name.get(i));
+		}
+	}
+}
+
+
 
