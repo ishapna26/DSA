@@ -1,1 +1,34 @@
+Java Collections Framework:
+---------------------------
+- Collection is basically an interface (Set of methods / properties that defines the behaviour of the class).
+- It was developed inorder for the end users to use java easily.
+
+1. ArrayList: It is the advanced version of arrays in java.
+   Syntax:  " ArrayList<DataType> a =new ArrayList<>(); "
+
+* It has a lot of inbuilt methods that can be accessed using (.) operator to manipulate or put to use.
+* Popular methods: 
+                size(), get(), remove(), add(), contains()
+Example Program 1:
+----------------
+import java.util.*;
+
+class Main3{
+	public static void main(String[] args) {
+		
+		ArrayList <String> name=new ArrayList<>();
+		name.add("Shapna");
+		name.add("Lucy");
+		name.add("Mark");
+		
+		for(int i=0;i<name.size();i++) {
+			System.out.print(name.get(i)+" ");
+		}
+	}
+}
+
+2. LinkedList: (Resizable array / Dynamic array) - where the values can be added from both the sides ie. Rear and Front.
+   Syntax: LinkedList <DataType> a=new LinkedList<>();
+
+* Popular Methods: size(), add(), addFirst(), addLast()
 
