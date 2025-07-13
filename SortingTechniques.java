@@ -96,3 +96,55 @@ class Main2{
 		}
 	}
 }
+
+3. Counting Sort  
+------------------
+It is an index based sort in which the frequency of the elements are stored in an array and the cumulative distribution for that array is found and the elemnts are sorted based 
+on that.
+Time Complexity:  O(n+k)
+Space Complexity: O(n+k)
+import java.util.*;
+
+class Main5{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int[] unsorted=new int[n];
+		int[] sorted=new int[n];
+		
+		for(int i=0;i<n;i++) {
+			unsorted[i]=sc.nextInt();
+		}
+		
+		int max=Integer.MIN_VALUE;
+		for(int i=0;i<n;i++) {
+			if(unsorted[i]>max) {
+				max=unsorted[i];
+			}
+		}
+		
+		int n2=max+1;
+		int[] count=new int[n2];
+		
+		//find unsorted array element's frequency
+		for(int i=0;i<n;i++) {
+			count[unsorted[i]]++;
+		}
+		
+		//find cumulative distribution of the element
+		for(int i=1;i<n2;i++) {
+			count[i]=count[i]+count[i-1];
+		}
+		
+		//sort according to the cumulative value: it gives the index of the element
+		//traverse the unsorted list from n-1 to 0 for stable sorting
+		for(int i=n-1;i>=0;i--) {
+			sorted[count[unsorted[i]]-1]=unsorted[i];
+			count[unsorted[i]]--;
+		}
+		
+		for(int i=0;i<n;i++) {
+			System.out.print(sorted[i]+" ");
+		}
+	}
+}
