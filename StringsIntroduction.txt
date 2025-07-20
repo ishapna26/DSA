@@ -1,1 +1,55 @@
-Strings 
+Strings: String are the sequence of characters. [In java Strings are represented using String datatype]
+But " internally strings are stored as character array " (Internally, a String in Java uses a character array (char[]) to store its contents.)
+
+Internally:
+char[] value = {'J', 'a', 'v', 'a'};
+
+Arrays:
+-------
+
+1. Integer:
+-----------
+int[] n=new int[10] : Here we can store upto 10 elements.
+
+2. Character:
+-------------
+char[] ch=new char[10]: 
+Here we can store only 9 characters because the "10th character is going to be null"
+in all the character arrays.
+
+Character Array in Java:
+-------------------------
+import java.util.*;
+class Main7{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		String str=sc.nextLine();
+		
+		char[] ch=str.toCharArray();
+		
+		for(int i=0;i<ch.length;i++) {
+			System.out.println(ch[i]+" ");	
+		}
+	}
+}
+
+(or)
+
+import java.util.*;
+class Main7{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		String str=sc.nextLine();
+		
+		String[] ch=str.split("");
+		
+		for(int i=0;i<ch.length;i++) {
+			System.out.println(ch[i]+" ");	
+		}
+	}
+}
+
+Why Strings are Immutable in Java: Immutable: Once string is created it cant be modified.
+----------------------------------
