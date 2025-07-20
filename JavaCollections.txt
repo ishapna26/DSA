@@ -89,5 +89,19 @@ class Main3{
 	}
 }
 
+4. Vector: similar to ArrayList -> can be used when you want a thread safe implementation (ie. can handle race condition: multile accessing and modifying the list)
 
+import java.util.*;
+class Main7{
+	public static void main(String[] args) {
+		
+		Vector<Integer>v=new Vector<>();
+		v.add(1);
+		v.add(2);
+		
+		for(int i=0;i<v.size();i++) {
+			System.out.print(v.get(i));
+		}
+	}
+}
 
