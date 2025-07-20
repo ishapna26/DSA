@@ -43,3 +43,52 @@ class Main7{
 		System.out.print(reversed)	;
 	}
 }
+
+2. Palindrome:
+--------------
+import java.util.*;
+class Main {
+    public static void main(String[] args) {    
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        StringBuilder reversed=new StringBuilder();
+        
+        for(int i=str.length()-1;i>=0;i--){
+            reversed.append(str.charAt(i));
+        }
+        if(str.equals(reversed.toString())){
+            System.out.println("palindrome");
+        }
+        else{
+            System.out.println("non palindrome");
+        }
+    }
+}
+
+(or)
+import java.util.*;
+class Main {
+    public static void main(String[] args) {    
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        
+        boolean isPalindrome=true;
+        int left=0;
+        int right=str.length()-1;
+        
+        while(left<right){
+            if(str.charAt(left)!=str.charAt(right)){
+                isPalindrome=false;
+                break;
+            }
+            left++;
+            right--;
+        }
+        if(isPalindrome){
+            System.out.print("palindrome");
+        }
+        else{
+            System.out.println("non palindrome");
+        }
+    }
+}
