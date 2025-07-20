@@ -3,6 +3,9 @@ Java Collections Framework:
 - Collection is basically an interface (Set of methods / properties that defines the behaviour of the class).
 - It was developed inorder for the end users to use java easily.
 
+LIST IMPLEMENTATIONS:
+--------------------
+--------------------
 1. ArrayList: It is the advanced version of arrays in java.
    Syntax:  " ArrayList<DataType> a =new ArrayList<>(); "
 
@@ -89,7 +92,7 @@ class Main3{
 	}
 }
 
-4. Vector: similar to ArrayList -> can be used when you want a thread safe implementation (ie. can handle race condition: multile accessing and modifying the list)
+4. Vector: similar to ArrayList -> can be used when you want a thread safe implementation (ie. can handle race condition: multiple people accessing and modifying the list)
 
 import java.util.*;
 class Main7{
@@ -104,4 +107,55 @@ class Main7{
 		}
 	}
 }
+
+SET IMLEMENTATION 
+-----------------
+-----------------
+Three main types of set: 1. HashSet 2. LinkedHashSet 3. TreeSet ---> No sets allows duplicate elements.
+Syntax: 
+Set<DataType> set=new HashSet<>, Set<DataType> set=new HashSet<>, Set<DataType> set=new TreeSet<>
+
+1. HashSet: Here no guarantee of ordering. 
+2. LinkedHashSet: Here elements are stored in an order.
+3. TreeSet: Here elements will be stored in a sorted order.
+
+xxx Set dont have get method xxx
+- because set is not ordered by index
+- You can access the element by:
+
+1. for(int num: set){
+   System.out.println(num);
+}
+
+2. using iterator class
+
+Iterator<String> iterator = set.iterator();
+while (iterator.hasNext()) {
+    System.out.println(iterator.next());
+}
+
+
+QUEUE IMPLEMENTATION: Like set queue also dont have get() method beacuse they are order based and not based on index.
+--------------------
+--------------------
+The elements inside the queue can be accessed using FIFO principle.
+1. queue : Queue<Datatype> queue=new LinkedList<>()
+2. ArrayDeque: ArrayDeque<Datatype> deque=new ArrayDeque<>(); [offer(), offerFirst(), offerLast(), add(), peek(), poll()]
+3. PriorityDeque: PriorityQueue<Datatype> pq=new PriorityQueue<>();
+   -It retrieves the value in ascending order (By internal structure it stores values in a way how we gave the input but only when retrieving it prints in ascending order).
+
+
+| Method      | Description                          | Throws Exception? |
+| ----------- | ------------------------------------ | ----------------- |
+| `peek()`    | Returns the head without removing it | ❌ No              |
+| `element()` | Returns the head without removing it | ✅ Yes (if empty)  |
+| `poll()`    | Returns and removes the head         | ❌ No              |
+| `remove()`  | Returns and removes the head         | ✅ Yes (if empty)  |
+
+
+HASHMAPS:
+---------
+---------
+1. Maps have key value pairs
+2. The keys should be unique
 
