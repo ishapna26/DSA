@@ -153,7 +153,7 @@ The elements inside the queue can be accessed using FIFO principle.
 | `remove()`  | Returns and removes the head         | ✅ Yes (if empty)  |
 
 
-HASHMAPS:
+HASHMAPS: no order is maintained in hasmap
 ---------
 ---------
 1. Maps have key value pairs
@@ -181,4 +181,5 @@ output:
 {1=Allie, 2=Bob, 3=Carie, 4=Daniel, 5=Emma}
 Emma
 
+- We also have TreeMap (maintains order unlike hashmap)
 
