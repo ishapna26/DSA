@@ -55,3 +55,13 @@ class Main7{
 	}
 }
 
+ASCII values: numerical value of the characters
+1. A-Z: 65 to 90
+2. a-z: 97 to 122
+3. 0-9: 48 to 54
+
+Tricks to convert the string to number without using Integer.parseInt()
+str="1234"
+int num=str.charAt(0)-'0'
+
+output: 1
