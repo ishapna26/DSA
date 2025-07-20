@@ -159,3 +159,26 @@ HASHMAPS:
 1. Maps have key value pairs
 2. The keys should be unique
 
+import java.util.*;
+
+class Main7{
+	public static void main(String[] args) {
+		
+		HashMap<Integer,String> data=new HashMap<>();
+		
+		data.put(1,"Allie");
+		data.put(2,"Bob");
+		data.put(3,"Carie");
+		data.put(4,"Daniel");
+		data.put(5,"Emma");
+		
+		System.out.println(data);
+		System.out.println(data.get(5));	
+	}
+}
+
+output:
+{1=Allie, 2=Bob, 3=Carie, 4=Daniel, 5=Emma}
+Emma
+
+
