@@ -4,9 +4,13 @@ But " internally strings are stored as character array " (Internally, a String i
 Internally:
 char[] value = {'J', 'a', 'v', 'a'};
 
+Why Strings are Immutable in Java: (Immutable: Once string is created it cant be modified.)
+----------------------------------
+Beacause in strings if you tried to modify it creates a "new String object" rather than replacing it.  
+The reference string variable will point to a new location but the old string will remain unchanged in the previous memory and it becomes redundant.
+
 Arrays:
 -------
-
 1. Integer:
 -----------
 int[] n=new int[10] : Here we can store upto 10 elements.
@@ -51,5 +55,3 @@ class Main7{
 	}
 }
 
-Why Strings are Immutable in Java: Immutable: Once string is created it cant be modified.
-----------------------------------
