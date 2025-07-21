@@ -92,3 +92,31 @@ class Main {
         }
     }
 }
+
+3. Rotate String:
+import java.util.*;
+
+class Main8{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		String str=sc.nextLine();
+		String goal=sc.nextLine();
+		boolean flag=false;
+		for(int i=1;i<=str.length();i++) {
+			String var=str.substring(i)+str.substring(0,i);
+			
+			if(var.equals(goal)) {
+				flag=true;
+				break;
+			}
+		}
+		if(flag) {
+			System.out.print("true");
+		}
+		else {
+			System.out.print("false");
+
+		}
+	}
+}
