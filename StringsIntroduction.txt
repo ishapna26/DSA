@@ -66,4 +66,8 @@ int num=str.charAt(0)-'0'
 
 output: 1
 
+(or)
+
+char ch=str.charAt(i);
+int n=Character.getNumericValue(ch);
 
