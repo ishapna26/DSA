@@ -94,6 +94,15 @@ class Main {
 }
 
 3. Rotate String:
+Example 1:
+
+Input: s = "abcde", goal = "cdeab"
+Output: true
+Example 2:
+
+Input: s = "abcde", goal = "abced"
+Output: false
+	
 import java.util.*;
 
 class Main8{
@@ -120,3 +129,5 @@ class Main8{
 		}
 	}
 }
+
+
