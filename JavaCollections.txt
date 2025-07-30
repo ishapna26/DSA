@@ -113,7 +113,7 @@ SET IMLEMENTATION
 -----------------
 Three main types of set: 1. HashSet 2. LinkedHashSet 3. TreeSet ---> No sets allows duplicate elements.
 Syntax: 
-Set<DataType> set=new HashSet<>, Set<DataType> set=new HashSet<>, Set<DataType> set=new TreeSet<>
+Set<DataType> set=new HashSet<>, Set<DataType> set=new LinkedHashSet<>, Set<DataType> set=new TreeSet<>
 
 1. HashSet: Here no guarantee of ordering. 
 2. LinkedHashSet: Here elements are stored in an order.
