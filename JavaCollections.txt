@@ -181,5 +181,5 @@ output:
 {1=Allie, 2=Bob, 3=Carie, 4=Daniel, 5=Emma}
 Emma
 
-- We also have TreeMap (maintains order unlike hashmap)
+- We also have TreeMap, LinkedHashMap (maintains order unlike hashmap)
 
