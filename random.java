@@ -75,3 +75,36 @@ class Main9{
 		}
 	}
 }
+
+2. Zoho Pattern
+import java.util.*;
+
+class Main9{
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		String str=sc.nextLine();
+		
+		int count=1;
+		String res="";
+		char ch=0;
+		for(int i=0;i<str.length()-1;i++) {
+			ch=str.charAt(i);
+			
+			if(ch!=str.charAt(i+1)) {
+				if(count>1) {
+				res+=count+""+ch;
+				count=1;
+				}
+			}
+			else {
+				count++;
+				continue;
+			}
+		}
+		if(count>1) {
+			res+=count+""+ch;
+		}
+		System.out.print(res);
+	}
+}
