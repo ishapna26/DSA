@@ -30,3 +30,31 @@ class Solution {
 
     }
 }
+
+(or)
+//we are only checking the first and last string in lexicography order because it pushes the strings with largest difference.
+//In case any mismatch is present then it is also present in the strings inbetween
+class Solution {
+    public String longestCommonPrefix(String[] strs) {
+        int n=strs.length;
+        Arrays.sort(strs);
+
+        String first=strs[0];
+        int l1=first.length();
+        String last=strs[n-1];
+        int l2=last.length();
+
+        int index=-1;
+        for(int i=0;i<Math.min(l1,l2);i++){
+            if(first.charAt(i)!=last.charAt(i)){
+                break;
+            }
+            index=i;
+        }
+
+        if(index==-1){
+            return "";
+        }
+        return strs[0].substring(0,index+1);
+    }
+}
