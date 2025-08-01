@@ -173,3 +173,34 @@ class Main9{
 		
 	}
 }
+
+(or)
+
+import java.util.*;
+
+class Main9{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String s1=sc.next();
+		String s2=sc.next();
+		
+		boolean anagram=true;
+		char[] ch1=s1.toLowerCase().toCharArray();
+		char[] ch2=s2.toLowerCase().toCharArray();
+		
+		Arrays.sort(ch1);
+		Arrays.sort(ch2);
+		
+		s1=new String(ch1);
+		s2=new String(ch2);
+		
+		if(s1.equals(s2)) {
+			anagram=true;
+		}
+		else {
+			anagram=false;
+		}
+		
+		System.out.print(anagram);
+	}
+}
