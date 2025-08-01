@@ -130,4 +130,46 @@ class Main8{
 	}
 }
 
+4. Anagrams:
+// my approach
+import java.util.*;
 
+class Main9{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String s1=sc.next();
+		String s2=sc.next();
+		
+		boolean anagram=true;
+		s1=s1.toLowerCase();
+		s2=s2.toLowerCase();
+		
+		int[] freq1=new int[27];
+		int[] freq2=new int[27];
+		
+		if(s1.length()==s2.length()) {
+			for(int i=0;i<s1.length();i++) {
+				int ch1=s1.charAt(i);
+				int ch2=s2.charAt(i);
+				freq1[ch1-96]++;
+				freq2[ch2-96]++;
+			}
+		}
+		else {
+			anagram=false;
+		}
+		for(int i=0;i<27;i++) {
+			if(freq1[i]!=freq2[i]) {
+				anagram=false;
+				break;
+			}
+		}
+		if(anagram) {
+			System.out.print("anagram");
+		}
+		else {
+			System.out.print("non anagram");
+		}
+		
+	}
+}
