@@ -34,7 +34,7 @@ class Main9{
 				break;
 			}
 			if(key<a[mid]) {
-				r=mid;
+				r=mid-1;
 			}
 			if(key>a[mid]) {
 				l=mid+1;
