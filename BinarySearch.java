@@ -1,4 +1,4 @@
-Binary Search: Divide and conquer technique
+Binary Search: Divide and conquer technique (Time complexity: O (log n) )
 --------------
 1. Binary Search is searching technique performed on a sorted array only.
 2. It is a very efficient searching technique.
