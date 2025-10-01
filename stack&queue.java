@@ -46,3 +46,11 @@ class Main{
         return top==-1;
     }
 }
+
+QUEUE:
+-----
+A queue is a data structure that is used to store elements using FIFO Principle (FIRST IN FIRST OUT)
+operations: enqueue(), dequeue(), front(), isEmpty()
+
+Queue Implemenation using Array:
+-------------------------------
